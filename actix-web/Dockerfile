@@ -6,7 +6,7 @@ RUN USER=root cargo init
 # Copy Cargo.toml to get dependencies
 COPY Cargo.toml .
 # This is a dummy build to get the dependencies cached
-# RUN cargo build --release
+RUN cargo build --release
 # Copy sources
 COPY src src
 # Build app (bin will be in /mybuild/target/release/actix-web)
