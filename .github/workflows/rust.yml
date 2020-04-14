@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: cd helloworld/actix-web && cargo build --verbose
+      run: echo $PWD && ls $PWD -l && cd helloworld/actix-web && cargo build --verbose
     - name: Run tests
       run: cd helloworld/actix-web && cargo test --verbose
